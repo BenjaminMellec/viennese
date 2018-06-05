@@ -1,0 +1,131 @@
+@import "grid";
+@import "gridcontent";
+@mixin svgCenter () {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+//SVG
+.logo {
+    @include svgCenter();
+    svg {
+        width: 78%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+.sound {
+    @include svgCenter();
+    svg {
+        width: 30%;
+        height: auto;
+        margin: auto;
+        padding-left: 10px;
+    }
+}
+
+.hamburger {
+    @include svgCenter();
+    svg {
+        margin: auto;
+    }
+}
+
+.arrow {
+    @include svgCenter();
+    width: 20%;
+    height: 100%;
+    margin: auto;
+    svg {
+        width: 10%;
+        height: auto;
+        transform: rotate(90deg);
+        margin-left: auto;
+    }
+    p {
+        font-size: 0.8em;
+    }
+}
+
+//HOVERS
+.row1-col1:hover {
+    background-color: black;
+    svg {
+        fill: white;
+    }
+    p {
+        color: white;
+    }
+    .row1-col1-col1 {
+        border-right: 1px solid white;
+    }
+    .row1-col1-col1-row2 {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+}
+
+.row1-col3-col1:hover {
+    background-color: black;
+    polygon {
+        stroke: white;
+    }
+    line {
+        stroke: white;
+    }
+}
+
+.row1-col3-col2:hover {
+    background-color: black;
+    polygon {
+        stroke: white;
+        fill: white;
+    }
+    line {
+        stroke: white;
+    }
+    p {
+        color: white;
+    }
+}
+
+.row1-col3-col3:hover {
+    background-color: black;
+    line {
+        stroke: white;
+    }
+}
+
+.row5-col1-row1-col2:hover {
+    background-color: rgb(218, 216, 216);
+}
+
+#first-square:hover {
+    background-color: rgb(172, 169, 169);
+}
+
+#second-square:hover {
+    background-color: rgb(106, 105, 105);
+}
+
+#third-square:hover {
+    background-color: rgb(60, 59, 59);
+}
+
+.circle:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+//ANIMATIONS
